@@ -1,4 +1,4 @@
-import { Product } from "../types";
+import type { Product } from "@prisma/client";
 import ProductCard from "./product-card";
 
 interface ProductListProps {
