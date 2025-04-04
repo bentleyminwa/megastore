@@ -1,9 +1,10 @@
-function delay(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
+import sampleData from "@/db/sample-data";
+import ProductList from "@/features/product/components/product-list";
 
-export default async function Homepage() {
-  await delay(2000);
-
-  return <div>Home</div>;
+export default function Homepage() {
+  return (
+    <section>
+      <ProductList data={sampleData.products} title="New Arrivals" limit={4} />
+    </section>
+  );
 }
