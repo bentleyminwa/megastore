@@ -12,13 +12,16 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader className="p-0 items-center">
-        <Link href={`/product/${product.slug}`}>
+        <Link
+          href={`/product/${product.slug}`}
+          className="relative w-full aspect-square h-[300px]"
+        >
           <Image
             src={product.images[0]}
             alt={product.name}
-            width={300}
-            height={300}
+            fill
             priority
+            className="object-contain rounded-lg"
           />
         </Link>
       </CardHeader>
@@ -28,7 +31,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           <h2 className="font-medium text-sm">{product.name}</h2>
         </Link>
         <div className="flex items-center justify-between">
-          <p>{product.rating} Stars</p>
+          <p>{product.rating.toString()} Stars</p>
           {product.stock > 0 ? (
             <ProductPrice value={Number(product.price)} />
           ) : (

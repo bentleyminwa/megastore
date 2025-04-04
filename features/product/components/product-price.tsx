@@ -10,7 +10,7 @@ export default function ProductPrice({ value, className }: ProductPriceProps) {
 
   return (
     <p className={className}>
-      <span className="text-xs align-super">$ </span>
+      <span className="text-xs align-super">Ksh </span>
       <span className="text-2xl font-bold">{intValue}</span>
       <span className="text-xs align-super">{floatValue}</span>
     </p>
