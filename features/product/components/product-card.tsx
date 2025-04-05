@@ -10,18 +10,18 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <Card className="w-full max-w-sm">
+    <Card className="w-full max-w-sm py-0">
       <CardHeader className="p-0 items-center">
         <Link
           href={`/product/${product.slug}`}
-          className="relative w-full aspect-square h-[300px]"
+          className="relative w-full h-[300px]"
         >
           <Image
             src={product.images[0]}
             alt={product.name}
             fill
             priority
-            className="object-contain rounded-lg"
+            className="object-contain"
           />
         </Link>
       </CardHeader>
