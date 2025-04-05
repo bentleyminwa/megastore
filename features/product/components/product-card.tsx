@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import type { Product } from "@prisma/client";
+import { Product } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import ProductPrice from "./product-price";
@@ -31,7 +31,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           <h2 className="font-medium text-sm">{product.name}</h2>
         </Link>
         <div className="flex items-center justify-between">
-          <p>{product.rating.toString()} Stars</p>
+          <p>{product.rating} Stars</p>
           {product.stock > 0 ? (
             <ProductPrice value={Number(product.price)} />
           ) : (
