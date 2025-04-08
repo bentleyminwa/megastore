@@ -41,7 +41,7 @@ model User {
   password      String?
   role          String    @default("user")
   address       Json?     @db.Json
-  paymentMethod String
+  paymentMethod String?
   account       Account[]
   session       Session[]
   createdAt     DateTime  @default(now())
