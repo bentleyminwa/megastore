@@ -19,7 +19,7 @@ export default function Header() {
             </Link>
           </Button>
           <Button asChild>
-            <Link href="/cart">
+            <Link href="/sign-in">
               <LucideUser /> Sign In
             </Link>
           </Button>

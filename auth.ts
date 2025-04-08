@@ -7,8 +7,8 @@ import { prisma } from "./db/prisma";
 
 export const config = {
   pages: {
-    signIn: "/auth/sign-in",
-    error: "/auth/error",
+    signIn: "/sign-in",
+    error: "/sign-in",
   },
   session: {
     strategy: "jwt",
