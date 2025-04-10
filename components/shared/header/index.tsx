@@ -1,10 +1,9 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
-import { LucideShoppingCart, LucideUser } from "lucide-react";
+import { LucideShoppingCart } from "lucide-react";
 import Link from "next/link";
 import ThemeToggle from "../theme/theme-toggle";
 import Logo from "./logo";
+import UserButton from "./user-button";
 
 export default function Header() {
   return (
@@ -18,11 +17,7 @@ export default function Header() {
               <LucideShoppingCart /> Cart
             </Link>
           </Button>
-          <Button asChild>
-            <Link href="/sign-in">
-              <LucideUser /> Sign In
-            </Link>
-          </Button>
+          <UserButton />
         </section>
       </section>
     </header>
